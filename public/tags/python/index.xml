@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Python on Sarthak&#39;s Blog</title>
+    <link>https://m0mosenpai.com/tags/python/</link>
+    <description>Recent content in Python on Sarthak&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Mon, 11 Oct 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://m0mosenpai.com/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Python packages, modules and import statements</title>
+      <link>https://m0mosenpai.com/posts/2_python_imports/python_imports/</link>
+      <pubDate>Mon, 11 Oct 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://m0mosenpai.com/posts/2_python_imports/python_imports/</guid>
+      <description>&amp;#34;ModuleNotFoundError: No module named &amp;#39;Monjiro&amp;#39; &amp;#34;</description>
+    </item>
+    
+  </channel>
+</rss>

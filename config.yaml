@@ -1,0 +1,129 @@
+baseURL: "https://m0mosenpai.com/"
+title: Sarthak's Blog
+paginate: 5
+theme: PaperMod
+
+enableRobotsTXT: true
+buildDrafts: false
+buildFuture: false
+buildExpired: false
+
+minify:
+    disableXML: true
+    minifyOutput: true
+
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON # is necessary
+
+frontmatter:
+  date:
+    - :filename
+
+params:
+    env: production
+    title: m0mosenpai
+    description: "programming, games, life"
+    keywords: [Blog, Portfolio, PaperMod]
+    author: Me
+    defaultTheme: auto # dark, light
+    disableThemeToggle: false
+
+    ShowReadingTime: true
+    ShowShareButtons: false
+    ShowPostNavLinks: false
+    ShowBreadCrumbs: true
+    ShowCodeCopyButtons: true
+    disableSpecial1stPost: false
+    disableScrollToTop: false
+    comments: false
+    hidemeta: false
+    hideSummary: false
+    showtoc: false
+    tocopen: false
+
+    assets:
+        disableHLJS: true # to disable highlight.js
+        # disableFingerprinting: true
+        favicon: "/favicon.ico"
+        favicon16x16: "/favicon-16x16.png"
+        favicon32x32: "/favicon-32x32.png"
+        apple_touch_icon: "/apple-touch-icon.png"
+
+    label:
+        text: "0xMomo"
+        # icon: /apple-touch-icon.png
+        iconHeight: 35
+
+    # profile-mode
+    profileMode:
+        enabled: true # needs to be explicitly set
+        title: Sarthak Khattar
+        subtitle: "programming, games, life"
+        imageUrl: "/girl.gif"
+        imageWidth: 240
+        imageHeight: 240
+        imageTitle: profile
+        buttons:
+            - name: Posts
+              url: posts
+            - name: Tags
+              url: tags
+
+    # home-info mode
+    homeInfoParams:
+        Title: "Sarthak's Blog"
+        Content: Beep Boop Description not found.
+
+    socialIcons:
+        - name: github
+          url: "https://github.com/m0mosenpai"
+        - name: linkedin
+          url: "https://www.linkedin.com/in/m0mosenpai/"
+        - name: twitter
+          url: "https://twitter.com/Mr_Momo07"
+        - name: stackoverflow
+          url: "https://stackoverflow.com/users/5678193/m0mosenpai"
+        - name: RSS
+          url: "index.xml"
+
+    cover:
+        hidden: true # hide everywhere but not in structured data
+        hiddenInList: true # hide on list pages and home
+        hiddenInSingle: true # hide on single page
+
+    # for search
+    # https://fusejs.io/api/options.html
+    fuseOpts:
+        isCaseSensitive: false
+        shouldSort: true
+        location: 0
+        distance: 1000
+        threshold: 0.4
+        minMatchCharLength: 0
+        keys: ["title", "permalink", "summary", "content"]
+menu:
+    main:
+        - identifier: categories
+          name: categories
+          url: /categories/
+          weight: 10
+        - identifier: tags
+          name: tags
+          url: /tags/
+          weight: 20
+        - identifier: archives
+          name: archive
+          url: /archives/
+          weight: 5
+# Read: https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#using-hugos-syntax-highlighter-chroma
+# pygmentsUseClasses: true
+markup:
+    highlight:
+        anchorLineNos: true
+        codeFences: true
+        guessSyntax: true
+        # lineNos: true
+        style: monokai
