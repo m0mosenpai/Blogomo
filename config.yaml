@@ -1,4 +1,4 @@
-baseURL: "https://m0mosenpai.github.io/Blogomo"
+baseURL: "https://m0mosenpai.github.io/Blogomo/"
 title: Sarthak's Blog
 paginate: 5
 theme: PaperMod
@@ -18,15 +18,15 @@ outputs:
     - RSS
     - JSON # is necessary
 
-frontmatter:
-  date:
-    - :filename
+# frontmatter:
+#   date:
+#     - :filename
 
 params:
     env: production
     title: m0mosenpai
     description: "programming, games, life"
-    keywords: [Blog, Portfolio, PaperMod]
+    keywords: [Blog, Portfolio]
     author: Me
     defaultTheme: auto # dark, light
     disableThemeToggle: false
@@ -47,10 +47,10 @@ params:
     assets:
         disableHLJS: true # to disable highlight.js
         # disableFingerprinting: true
-        favicon: "/favicon.ico"
-        favicon16x16: "/favicon-16x16.png"
-        favicon32x32: "/favicon-32x32.png"
-        apple_touch_icon: "/apple-touch-icon.png"
+        favicon: "favicon.ico"
+        favicon16x16: "favicon-16x16.png"
+        favicon32x32: "favicon-32x32.png"
+        apple_touch_icon: "apple-touch-icon.png"
 
     label:
         text: "0xMomo"
@@ -62,7 +62,7 @@ params:
         enabled: true # needs to be explicitly set
         title: Sarthak Khattar
         subtitle: "programming, games, life"
-        imageUrl: "/girl.gif"
+        imageUrl: "girl.gif"
         imageWidth: 240
         imageHeight: 240
         imageTitle: profile
@@ -96,28 +96,31 @@ params:
 
     # for search
     # https://fusejs.io/api/options.html
-    fuseOpts:
-        isCaseSensitive: false
-        shouldSort: true
-        location: 0
-        distance: 1000
-        threshold: 0.4
-        minMatchCharLength: 0
-        keys: ["title", "permalink", "summary", "content"]
-menu:
-    main:
-        - identifier: categories
-          name: categories
-          url: /categories/
-          weight: 10
-        - identifier: tags
-          name: tags
-          url: /tags/
-          weight: 20
-        - identifier: archives
-          name: archive
-          url: /archives/
-          weight: 5
+    # fuseOpts:
+    #     isCaseSensitive: false
+    #     shouldSort: true
+    #     location: 0
+    #     distance: 1000
+    #     threshold: 0.4
+    #     minMatchCharLength: 0
+    #     keys: ["title", "permalink", "summary", "content"]
+
+languages:
+    en:
+        languageName: "English"
+        weight: 1
+        menu:
+            main:
+                - name: Archive
+                  url: archives
+                  weight: 5
+                - name: Search
+                  url: search/
+                  weight: 10
+                - name: Tags
+                  url: tags/
+                  weight: 10
+
 # Read: https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#using-hugos-syntax-highlighter-chroma
 # pygmentsUseClasses: true
 markup:
