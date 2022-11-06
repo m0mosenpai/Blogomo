@@ -10,17 +10,17 @@ A few weeks back, I interviewed for [Deepsource](https://deepsource.io/) as a Py
 
 Let's go over the problem first. You can follow along by cloning the repo from [here](https://github.com/srijan-deepsource/import-me).
 
-![tree](/Blogomo/static/2_python_imports/tree.png)
+![tree](/static/2_python_imports/tree.png)
 
 > _In the following directory structure, file `test_import.py` is attempting to import a function `import_me` from `import_me/utils/package`. Upon running `python test_import.py`, you get the an error. Why does this happen and how will you solve it?_
 
 Let's run the file first and see what error we get exactly:
-![tree](/Blogomo/static/2_python_imports/error.png)
+![tree](/static/2_python_imports/error.png)
 
 Hmmm...
 
 _"Oh, I know! There was this one time I found this StackOverflow answer that suggested me to use `python -m` instead of `python` and do this weird dot notation thing with the files. Well idk what any of this means, but it should work right?"_
-![voila](/Blogomo/static/2_python_imports/voila.png)
+![voila](/static/2_python_imports/voila.png)
 
 Hmmmmmmmm...  
 So what just happened?
@@ -30,7 +30,7 @@ My first thoughts after seeing the error were that it most likely had something 
 Even if my hunch was correct, I needed a way to verify this. The interviewer suggested me to use the `sys` module and print out the contents of `PYTHONPATH` in both the cases.
 
 Importing `sys` and adding a print statement for `sys.path`,  we can notice something interesting between the two cases:
-![sys](/Blogomo/static/2_python_imports/sys.png)
+![sys](/static/2_python_imports/sys.png)
 
 Well, my intuition was right.  
 
@@ -41,11 +41,11 @@ In the first case, Python only knows about the directory the script ran from. Th
 
 So how do we fix this? We could simply run it as a module and call it a day.  
 But what if we _really_ want to run the file as a script? Well then, how about adding the path of the root directory to `PYTHONPATH`? This should allow Python to see module despite the file being run a script. Let's try it out:
-![import_200](/Blogomo/static/2_python_imports/import_200.png)
+![import_200](/static/2_python_imports/import_200.png)
 
 And there we go! We can see that our newly exported path indeed shows up in the environment and now Python is able to find the function easily.
 
 I'm not sure situations would arise where one would have to do this in a professional setting. But I do believe it's a good way to explain the fundamental concept behind Python modules, packages and it's import system. A neat explanation of these terms can be found over at [Real Python](https://realpython.com/lessons/scripts-modules-packages-and-libraries/), a website I **highly** recommend to everyone for learning Python.
 
 Till next time.
-![tnt](/Blogomo/static/2_python_imports/tillnexttime.gif)
+![tnt](/static/2_python_imports/tillnexttime.gif)
